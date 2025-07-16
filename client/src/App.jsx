@@ -11,7 +11,7 @@ function App() {
         const token = localStorage.getItem('token');
         const fetchUser = async () => {
             if (token) {
-                const res = await fetch('http://localhost:5000/api/me', {
+                const res = await fetch('https://daphnis-labs-company.onrender.com/api/me', {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (res.ok) {

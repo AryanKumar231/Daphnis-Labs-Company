@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    await axios.post('http://localhost:5000/api/auth/logout', {}, { withCredentials: true });
+    await axios.post('https://daphnis-labs-company.onrender.com/api/auth/logout', {}, { withCredentials: true });
     setUser(false);
     navigate('/login');
   };

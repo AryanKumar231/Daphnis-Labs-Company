@@ -14,7 +14,7 @@ const Dashboard = ({ user, setUser }) => {
             return;
         }
 
-        fetch('http://localhost:5000/user-url', {
+        fetch('https://daphnis-labs-company.onrender.com/user-url', {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then((res) => res.json())
@@ -25,7 +25,7 @@ const Dashboard = ({ user, setUser }) => {
     const handleShorten = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('http://localhost:5000/generate-url', {
+        const res = await fetch('https://daphnis-labs-company.onrender.com/generate-url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const Dashboard = ({ user, setUser }) => {
 
         if (res.ok) {
             setOriginalUrl('');
-            const updated = await fetch('http://localhost:5000/user-url', {
+            const updated = await fetch('https://daphnis-labs-company.onrender.com/user-url', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setUrls(await updated.json());
@@ -88,8 +88,8 @@ const Dashboard = ({ user, setUser }) => {
                             <tr key={url._id}>
                                 <td className="p-2 border truncate">{url.originalUrl}</td>
                                 <td className="p-2 border text-blue-600">
-                                    <a href={`http://localhost:5000/${url.shortCode}`} target="_blank" rel="noreferrer">
-                                        http://localhost:5000/{url.shortCode}
+                                    <a href={`https://daphnis-labs-company.onrender.com/${url.shortCode}`} target="_blank" rel="noreferrer">
+                                        https://daphnis-labs-company.onrender.com/{url.shortCode}
                                     </a>
                                 </td>
                                 <td className="p-2 border text-center">{url.clicks}</td>
