@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
+const PORT=process.env.PORT
 
 app.use(cors({
     origin:"http://localhost:5173",
@@ -25,6 +26,6 @@ app.use("/api/", authroutes)
 app.use("/", urlroutes)
 
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("Port listining...\nserver running...");
 })
