@@ -61,23 +61,31 @@ cd mern-url-shortener
 ### 2. Setup Backend
 
 cd server
+
 npm install
+
 touch .env
 
 #### .env example:
 
 MONGODB_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/mydb
+
 JWT_SECRET=your_jwt_secret
+
 PORT=5000
 
 node server.js
-# or with nodemon
+
+#### or with nodemon
+
 nodemon server.js
 
 
 ### 3. Setup Frontend
 cd ../client
+
 npm install
+
 touch .env
 
 VITE_API_URL=http://localhost:5000
