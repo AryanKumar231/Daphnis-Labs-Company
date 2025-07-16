@@ -58,7 +58,7 @@ cd mern-url-shortener
 ```
 
 
-###2. Setup Backend
+### 2. Setup Backend
 
 cd server
 npm install
@@ -75,7 +75,7 @@ node server.js
 nodemon server.js
 
 
-###3. Setup Frontend
+### 3. Setup Frontend
 cd ../client
 npm install
 touch .env
@@ -85,7 +85,7 @@ VITE_API_URL=http://localhost:5000
 npm run dev
 
 
-##☁️ Deployment
+## ☁️ Deployment
 Frontend → Vercel
 Set Root Directory to client
 
@@ -100,7 +100,7 @@ Start Command: node index.js
 
 Add .env variables
 
-##🙋‍♂️ Author
+## 🙋‍♂️ Author
 Aryan Kumar
 🔗 GitHub : https://github.com/AryanKumar231
 📧 Email : aryanwork1204@gmail.com
